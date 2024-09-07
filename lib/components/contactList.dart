@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsappclone/components/chatInterface.dart';
 import 'package:whatsappclone/models/chatModel.dart';
 
 class ContactList extends StatelessWidget {
@@ -11,7 +12,9 @@ class ContactList extends StatelessWidget {
         itemCount: ChatModel().info.length,
         itemBuilder: (context, index) {
           return GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ChatInterface(image : ChatModel().info[index]["profilePic"].toString())));
+            },
             child: ListTile(
               title: Text(ChatModel().info[index]["name"].toString(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),),
               subtitle: Text(ChatModel().info[index]["message"].toString(), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w200, color: Colors.grey),),

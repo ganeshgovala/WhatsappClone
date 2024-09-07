@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:whatsappclone/components/chatInterface.dart';
 import 'package:whatsappclone/components/contactList.dart';
 import 'package:whatsappclone/components/inputField.dart';
 import 'package:whatsappclone/models/chatModel.dart';

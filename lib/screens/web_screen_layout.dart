@@ -1,11 +1,9 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unused_field
 
 import 'package:flutter/material.dart';
 import 'package:whatsappclone/colors.dart';
 import 'package:whatsappclone/components/chatInterface.dart';
 import 'package:whatsappclone/components/contactList.dart';
-import 'package:whatsappclone/components/inputField.dart';
-import 'package:whatsappclone/components/userTile.dart';
 import 'package:whatsappclone/models/chatModel.dart';
 class WebScreenLayout extends StatelessWidget {
   final ChatModel _chatModel = ChatModel();
@@ -106,7 +104,7 @@ class WebScreenLayout extends StatelessWidget {
               ),
             ),
           ),
-          ChatInterface()
+          ChatInterface(image : ChatModel().info[5]['message'].toString())
         ],
       ),
     );

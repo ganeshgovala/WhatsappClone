@@ -17,7 +17,7 @@ class MobileScreenLayout extends StatefulWidget {
 }
 
 class _MobileScreenLayoutState extends State<MobileScreenLayout> {
-  int selectedIndex = 3;
+  int selectedIndex = 0;
 
   List<Widget> pages = [
     HomePage(), StoryPage(), CommunityPage(), ContactPage(),

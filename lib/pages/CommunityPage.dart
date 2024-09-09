@@ -24,7 +24,8 @@ class CommunityPage extends StatelessWidget {
                   Icon(Icons.more_vert_outlined),
                 ],)
               ],
-            )
+            ),
+            SizedBox(height: 10),
           ],
         ),
       ),

@@ -17,6 +17,8 @@ class CommunityPage extends StatelessWidget {
               ),),
               Row(children: [
                 Icon(Icons.camera_alt_outlined),
+                SizedBox(width: 10),
+                Icon(Icons.more_vert_outlined),
               ],)
             ],
           )

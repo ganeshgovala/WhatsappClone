@@ -11,7 +11,8 @@ class ContactList extends StatelessWidget {
       child: ListView.builder(
         itemCount: ChatModel().info.length,
         itemBuilder: (context, index) {
-          return GestureDetector(
+          return MediaQuery.of(context).size.width < 900 
+                 ? GestureDetector(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => ChatInterface(image : ChatModel().info[index]["profilePic"].toString())));
             },
@@ -26,7 +27,18 @@ class ContactList extends StatelessWidget {
                 style: TextStyle(fontSize: 12),
               ),
             ),
-          );
+          ) 
+          : ListTile(
+              title: Text(ChatModel().info[index]["name"].toString(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),),
+              subtitle: Text(ChatModel().info[index]["message"].toString(), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w200, color: Colors.grey),),
+              leading: CircleAvatar(
+                backgroundImage: NetworkImage(ChatModel().info[index]["profilePic"].toString()),
+              ),
+              trailing: Text(
+                ChatModel().info[index]["time"].toString(),
+                style: TextStyle(fontSize: 12),
+              ),
+            );
         }
       ),
     );

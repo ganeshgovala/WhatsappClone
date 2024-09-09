@@ -6,23 +6,26 @@ class CommunityPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Text("Communities", style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.w600,
-              ),),
-              Row(children: [
-                Icon(Icons.camera_alt_outlined),
-                SizedBox(width: 10),
-                Icon(Icons.more_vert_outlined),
-              ],)
-            ],
-          )
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Text("Communities", style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),),
+                Row(children: [
+                  Icon(Icons.camera_alt_outlined),
+                  SizedBox(width: 10),
+                  Icon(Icons.more_vert_outlined),
+                ],)
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

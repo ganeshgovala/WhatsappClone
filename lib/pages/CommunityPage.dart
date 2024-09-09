@@ -6,9 +6,21 @@ class CommunityPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("Communities"),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Text("Communities", style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.w600,
+              ),),
+              Row(children: [
+                Icon(Icons.camera_alt_outlined),
+              ],)
+            ],
+          )
+        ],
       ),
     );
   }

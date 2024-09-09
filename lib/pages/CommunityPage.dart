@@ -11,6 +11,7 @@ class CommunityPage extends StatelessWidget {
         child: Column(
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Communities", style: TextStyle(
                   color: Colors.white,

@@ -26,6 +26,13 @@ class CommunityPage extends StatelessWidget {
               ],
             ),
             SizedBox(height: 10),
+            Row(
+              children: [
+                Container(
+                  child: Icon(Icons.group)
+                )
+              ],
+            )
           ],
         ),
       ),

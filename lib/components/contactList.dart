@@ -14,7 +14,7 @@ class ContactList extends StatelessWidget {
           return MediaQuery.of(context).size.width < 900 
                  ? GestureDetector(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ChatInterface(image : ChatModel().info[index]["profilePic"].toString())));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ChatInterface(image : ChatModel().info[index]["profilePic"].toString(), name: ChatModel().info[index]["name"].toString())));
             },
             child: ListTile(
               title: Text(ChatModel().info[index]["name"].toString(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),),

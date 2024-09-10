@@ -104,7 +104,7 @@ class WebScreenLayout extends StatelessWidget {
               ),
             ),
           ),
-          ChatInterface(image : ChatModel().info[5]['message'].toString())
+          //ChatInterface(image : ChatModel().info[5]['message'].toString())
         ],
       ),
     );

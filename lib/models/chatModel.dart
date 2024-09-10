@@ -73,9 +73,18 @@ class ChatModel {
 ];
 
 final messages = [
-  {"isMe": false, "text": "Hey What is up with you!!", "time": "10:00 am"},
-  {"isMe": true, "text": "im fine,wbu?", "time": "11:00 am"},
-  {"isMe": false, "text": "I am great man!", "time": "11:01 am"},
+  {"isMe": false, 
+   "text": "Hey What is up with you!!", 
+   "time": "10:00 am"
+  },
+  {"isMe": true, 
+   "text": "im fine,wbu?",
+   "time": "11:00 am"
+  },
+  {"isMe": false,
+   "text": "I am great man!",
+   "time": "11:01 am"
+  },
   {
     "isMe": false,
     "text": "Just messaged cuz I had some work.",

@@ -95,53 +95,46 @@ class _ChatInterfaceState extends State<ChatInterface> {
   }
 
   MessageBuilder(String message, String time, bool isMe) {
-    return ConstrainedBox(
-      constraints: BoxConstraints(
-        maxWidth: MediaQuery.of(context).size.width - 75,
+    return Container(
+      decoration: BoxDecoration(
+        color: isMe 
+               ? const Color.fromARGB(255, 0, 88, 59)
+               : Colors.grey.shade900,
+        borderRadius: isMe
+                      ? BorderRadius.only(topLeft: Radius.circular(7), bottomRight: Radius.circular(7), bottomLeft: Radius.circular(7))
+                      : BorderRadius.only(topRight: Radius.circular(7), bottomRight: Radius.circular(7), bottomLeft: Radius.circular(7)),
       ),
+      padding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
       child: Container(
-        decoration: BoxDecoration(
-          color: isMe 
-                 ? const Color.fromARGB(255, 0, 88, 59)
-                 : Colors.grey.shade900,
-          borderRadius: isMe
-                        ? BorderRadius.only(topLeft: Radius.circular(7), bottomRight: Radius.circular(7), bottomLeft: Radius.circular(7))
-                        : BorderRadius.only(topRight: Radius.circular(7), bottomRight: Radius.circular(7), bottomLeft: Radius.circular(7)),
-        ),
-        padding: EdgeInsets.symmetric(vertical: 6, horizontal: 10),
-        child: Container(
-          child: Container(
-            child: Stack(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 56.0 ,bottom: 4),
-                  child: Text(
-                    message, 
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300,
-                  ),),
-                ),
-                SizedBox(width: 5),
-                Positioned(
-                  bottom: 0,
-                  right: 12,
-                  child: Text(time, style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 9,
-                    fontWeight: FontWeight.w100,
-                  ),) 
-                ),
-                isMe ? Positioned(
-                  bottom: 0,
-                  right: 0,
-                  child: Icon(Icons.check, size: 10, color: Colors.white70)
-                ) :
-                Container()
-              ],
+        child: Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 56.0 ,bottom: 4),
+              child: Text(
+                message, 
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w300,
+              ),),
             ),
-          ),
+            SizedBox(width: 5),
+            Positioned(
+              bottom: 0,
+              right: 12,
+              child: Text(time, style: TextStyle(
+                color: Colors.white70,
+                fontSize: 9,
+                fontWeight: FontWeight.w100,
+              ),) 
+            ),
+            isMe ? Positioned(
+              bottom: 0,
+              right: 0,
+              child: Icon(Icons.check, size: 10, color: Colors.white70)
+            ) :
+            Container()
+          ],
         ),
       ),
     );

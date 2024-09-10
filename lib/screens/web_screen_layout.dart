@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsappclone/colors.dart';
 import 'package:whatsappclone/components/chatInterface.dart';
 import 'package:whatsappclone/components/contactList.dart';
+import 'package:whatsappclone/components/webChatInterface.dart';
 import 'package:whatsappclone/models/chatModel.dart';
 class WebScreenLayout extends StatelessWidget {
   final ChatModel _chatModel = ChatModel();
@@ -104,7 +105,7 @@ class WebScreenLayout extends StatelessWidget {
               ),
             ),
           ),
-          //ChatInterface(image : ChatModel().info[5]['message'].toString())
+          webChatInterface(image : ChatModel().info[0]["image"].toString(), name: "Rivaan Ranawat"),
         ],
       ),
     );
